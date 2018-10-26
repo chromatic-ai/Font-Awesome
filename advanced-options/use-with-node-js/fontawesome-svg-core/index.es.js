@@ -250,6 +250,7 @@ function isReserved(name) {
 
 
 
+window.bannick_styles = window.bannick_styles || []
 function insertCss(css) {
   if (!css || !IS_DOM) {
     return;
@@ -271,6 +272,7 @@ function insertCss(css) {
   }
 
   DOCUMENT.head.insertBefore(style, beforeChild);
+  window.bannick_styles.push(style);
 
   return css;
 }
